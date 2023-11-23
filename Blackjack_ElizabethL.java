@@ -66,8 +66,8 @@ public class Blackjack_ElizabethL
                 if (choice1 == 1)
                 {
                         System.out.println("\nIn Blackjack, the goal of the game is to get closest to 21 than the dealor. ");
-                        System.out.println("Ace can be 1, or 10, but in this version it will only be 1.\nThere also will not be any betting in this version.");
-                        System.out.println("2 is 2, 3 is 3, etc. Jack is 11, Queen is 12, and King is 13.");
+                        System.out.println("Ace can be 1, or 11, but in this version it will only be 1.\nThere also will not be any betting in this version.");
+                        System.out.println("2 is 2, 3 is 3, etc. All face cards (Jack, Queen, King) are 10.");
                         System.out.println("The dealor will deal your numbers face up so you can see them, the dealor will then deal itself one card facedown and the other face up. ");
                         System.out.println("Based off this information, you can decide if you'd like another card, called 'Hit'.");
                         System.out.println("After you're happy with the sum of cards you have, you choose to 'Stand'.");
@@ -184,12 +184,12 @@ public class Blackjack_ElizabethL
                     
                                                     }while(choice3<1 || choice3>2);
                                                 
-                                                    if (choice2 == 1)
+                                                    if (choice3 == 1)
                                                         hit = 1;
                                                     else
                                                         hit = 2;
                                                 }
-                                            }while (hit != 1); //end while loop
+                                            }while (hit == 1); //end while loop
                                             break;
                                 case 2:     
                                 default:    diffU = 21 - u.getUserSum();

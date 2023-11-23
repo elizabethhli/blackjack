@@ -39,78 +39,135 @@ public class Game
         public String setUser1 ()
         {
                 int user1 = (int)(Math.random() * 13 + 1);
-                userSum += user1;
                 
-                if (user1 == 1)
+                if (user1 == 1) 
+                {
+                    userSum += user1;
                     return "Ace";
-                else if (user1 == 11)
+                }
+                else if (user1 == 11) 
+                {
+                    userSum += 10;
                     return "Jack";
+                }
                 else if (user1 == 12)
+                {
+                    userSum += 10;
                     return "Queen";
+                }
                 else if (user1 == 13)
+                {
+                    userSum += 10;
                     return "King";
-                else
+                }
+                else {
+                    userSum += user1;
                     return String.valueOf(user1);
+                }
         }
                 
         //mutator method that sets up user's second card
         public String setUser2()
         {
                 int user2 = (int)(Math.random() * 13 + 1);
-                userSum += user2;
                 
-                if (user2 == 1)
+                if (user2 == 1) 
+                {
+                    userSum += user2;
                     return "Ace";
-                else if (user2 == 11)
+                }
+                else if (user2 == 11) 
+                {
+                    userSum += 10;
                     return "Jack";
+                }
                 else if (user2 == 12)
+                {
+                    userSum += 10;
                     return "Queen";
+                }
                 else if (user2 == 13)
+                {
+                    userSum += 10;
                     return "King";
-                else
+                }
+                else {
+                    userSum += user2;
                     return String.valueOf(user2);
+                }
         }
         
         //mutator method that sets up dealor's first card
         public String setDealor1()
         {
                 int d1 = (int)(Math.random() * 13 + 1);
-                dealorSum += d1;
                 
-                if (d1 == 1)
+                if (d1 == 1) 
+                {
+                    dealorSum += d1;
                     return "Ace";
-                else if (d1 == 11)
+                }
+                else if (d1 == 11) 
+                {
+                    dealorSum += 10;
                     return "Jack";
+                }
                 else if (d1 == 12)
+                {
+                    dealorSum += 10;
                     return "Queen";
+                }
                 else if (d1 == 13)
+                {
+                    dealorSum += 10;
                     return "King";
-                else
-                    return String.valueOf(d1);        
+                }
+                else {
+                    dealorSum += d1;
+                    return String.valueOf(d1);
+                }
         }
         
         //mutator method that sets up dealor's second card
         public String setDealor2()
         {
                 int d2 = (int)(Math.random() * 13 + 1);
-                dealorSum += d2;
                 
-                if (d2 == 1)
+                if (d2 == 1) 
+                {
+                    dealorSum += d2;
                     return "Ace";
-                else if (d2 == 11)
+                }
+                else if (d2 == 11) 
+                {
+                    dealorSum += 10;
                     return "Jack";
+                }
                 else if (d2 == 12)
+                {
+                    dealorSum += 10;
                     return "Queen";
+                }
                 else if (d2 == 13)
+                {
+                    dealorSum += 10;
                     return "King";
-                else
-                    return String.valueOf(d2);   
+                }
+                else {
+                    dealorSum += d2;
+                    return String.valueOf(d2);
+                }   
         }
         
         //mutator method that sets hitNum to random number between 1-13
         public int hitNum ()
         {
                 int hit = (int)(Math.random() * 13 + 1);
+
+                if (hit > 10) 
+                {
+                    hit = 10;
+                }
                 userSum += hit;
                 numHits++;
                 return hit;
